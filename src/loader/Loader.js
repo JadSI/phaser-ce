@@ -1904,7 +1904,7 @@ Phaser.Loader.prototype = {
                 if (file.type !== 'packfile')
                 {
                     this._loadedFileCount++;
-                    this.onFileComplete.dispatch(this.progress, file.key, !file.error, this._loadedFileCount, this._totalFileCount);
+                    this.onFileComplete.dispatch(this.progress, file.key, !file.error, this._loadedFileCount, this._totalFileCount, file);
                 }
                 else if (file.type === 'packfile' && file.error)
                 {
